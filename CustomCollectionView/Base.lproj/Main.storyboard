@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CustomCollectionView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2hs-kO-ytr">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewLayout key="collectionViewLayout" id="MkO-EC-k1M" customClass="GridLayout" customModule="CustomCollectionView" customModuleProvider="target"/>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="InstagramCollCell" id="Ev9-M5-K1B" customClass="InstagramCollCell" customModule="CustomCollectionView" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="98" height="113"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="98" height="113"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tmp" translatesAutoresizingMaskIntoConstraints="NO" id="TFV-q5-5bD">
+                                                    <rect key="frame" x="0.0" y="0.0" width="98" height="113"/>
+                                                    <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="TFV-q5-5bD" firstAttribute="top" secondItem="Ev9-M5-K1B" secondAttribute="top" id="10v-bl-5x6"/>
+                                            <constraint firstItem="TFV-q5-5bD" firstAttribute="leading" secondItem="Ev9-M5-K1B" secondAttribute="leading" id="GRi-UL-xzd"/>
+                                            <constraint firstAttribute="bottom" secondItem="TFV-q5-5bD" secondAttribute="bottom" id="VVH-9L-EXr"/>
+                                            <constraint firstAttribute="trailing" secondItem="TFV-q5-5bD" secondAttribute="trailing" id="WQu-s9-Oxs"/>
+                                        </constraints>
+                                        <size key="customSize" width="98" height="113"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2hs-kO-ytr" secondAttribute="bottom" id="NYc-Qt-9js"/>
+                            <constraint firstItem="2hs-kO-ytr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="jTk-7w-oJm"/>
+                            <constraint firstItem="2hs-kO-ytr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mEo-Kv-BtO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2hs-kO-ytr" secondAttribute="trailing" id="r8r-li-yqK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="InstagramCollection" destination="2hs-kO-ytr" id="cQa-e7-n2o"/>
+                        <outlet property="gridLayout" destination="MkO-EC-k1M" id="mjf-Nb-tOf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="47.826086956521742" y="20.758928571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tmp" width="1920" height="1212"/>
+    </resources>
+</document>
